@@ -1,0 +1,13 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: 
+% Description: 
+% 
+% Overview: 
+% [outputs] = function(input1,input2)
+%   INPUT ARGS
+%       input1 --> datatype and description of input1
+%       inpu2  --> datatype and description of input2
+%   OUTPUT ARGS
+%       outputs <-- datatype and description of outputs
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

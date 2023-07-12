@@ -10,6 +10,7 @@ _______
 
 ### Marcus Autism Center Specific
 - These functions are specific for work done at Marcus Autism Center. These include functions to group and mean certain queries of data, formatting DEX ID inputs, etc. If you work at Marcus or have worked   at Marcus and would like to contribute, send a PR!
+  If you're contributing, please use the comment template included in the repositor.
 
 ### Signal Processing
 - These functions are valuable for any work using densely sampled continous functions. I only breifly worked in signal processing, so this folder is a little sparse. 

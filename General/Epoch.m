@@ -12,7 +12,7 @@ function [result,censor,start,stop] = Epoch(X,P,M,EV)
 % This function is particularly valuable in survival analyses for ET data,
 % hence the censoring output argument. 
 %
-% Example: 
+% Overview: 
 % [result,censor,start,stop] = Epoch(X,P,M)
 %   INPUT ARGS
 %       X --> Double Nx1 or 1xN..........| Sequence of values to parse
