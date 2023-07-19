@@ -21,7 +21,7 @@ function patchCI(targetFigure,x,upper,lower,color,alpha)
     end
 
     if any(size(x) ~= size(upper))
-        x = x';
+        
     end
     %% Patch it!
     figure(targetFigure);

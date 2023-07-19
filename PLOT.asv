@@ -1,0 +1,50 @@
+function [thisplot] = PLOT(data,x,y,NameValueArgs)
+    arguments
+        data {mustBeA(data,"table")}
+        x char 
+        y char
+        
+        NameValueArgs.LineWidth (1,1) double = 2;
+        NameValueArgs.LineStyle string = "-";
+        NameValueArgs.Marker string = ".";
+        NameValueArgs.ColorBy string = "None";
+        NameValueArgs.MarkerSize (1,1) double = 10;
+
+        NameValueArgs.ConfidenceInterval (1,1) logical = false;
+        NameValueArgs.PlotType string = "LinePlot";
+    end
+    %%
+    if NameValueArgs.Marker ~= "None"
+        NameValueArgs.LineStyle = "None";
+    end
+
+    % Can't do CI's with scatter plot
+    if NameValueArgs.Marker ~= "None" && NameValueArgs.ConfidenceInterval == true
+        error("Cannot do confidence intervals on a scatter plot.")
+    end
+    
+    %% Begin Plotting
+    thisplot = figure;
+
+    if NameValueArgs.ColorBy == "None"
+        plot(data.(x), data.(y), ...
+            'LineWidth',NameValueArgs.LineWidth, ...
+            'LineStyle',NameValueArgs.LineStyle, ...
+            'Marker', NameValueArgs.Marker, ...
+            'MarkerSize', NameValueArgs.MarkerSize)
+    else
+        hold on;
+        groups = unique(data.(NameValueArgs.ColorBy));
+        for k = 1:size(groups,1)
+            filttable = data(data.(NameValueArgs.ColorBy) == groups(k),:);
+
+            plot(filttable.(x), filttable.(y), ...
+                'LineWidth',NameValueArgs.LineWidth, ...
+                'LineStyle',NameValueArgs.LineStyle, ...
+                'Marker', NameValueArgs.Marker,...
+                'MarkerSize', NameValueArgs.MarkerSize)
+        end
+    end
+
+    [upper,lower] = ConfidenceInterval(data.(y),.3,2);
+end

@@ -1,0 +1,22 @@
+function x = randomNormal(mu,var,sz)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: MS
+% Description: Generate random numbers from a sampling of the normal
+%              distribution with set mean and variance.
+% 
+% Overview: 
+% x = randomNormal(mu,var)
+%   INPUT ARGS
+%       mu     --> scalar double. Mean of sampling distrbution
+%       var    --> Scalar double. Variance of sampling distribution.
+%       s
+%   OUTPUT ARGS
+%       x      <-- scalar double. random number from sampling distribution.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    x = 
+
+
+end
+
